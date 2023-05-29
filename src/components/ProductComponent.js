@@ -1,72 +1,8 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const ProductComponent = () => {
-	const products = [
-		{
-			id: 1,
-			serialNumber: 1234,
-			title: 'Dell U2311H Black',
-			type: 'Monitors',
-			photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
-			guarantee: {
-				start: new Date('2022-01-01'),
-				end: new Date('2023-01-01')
-			},
-			price: [
-				{ value: 100, symbol: 'USD', isDefault: 0 },
-				{ value: 2600, symbol: 'UAH', isDefault: 1 }
-			],
-			order: 'Ut enim ad minim veniam, quis nostrud exercitation'
-		},
-		{
-			id: 2,
-			serialNumber: 1234,
-			title: 'Dell U2311H Black',
-			type: 'Monitors',
-			photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
-			guarantee: {
-				start: new Date('2022-01-01'),
-				end: new Date('2023-01-01')
-			},
-			price: [
-				{ value: 100, symbol: 'USD', isDefault: 0 },
-				{ value: 2600, symbol: 'UAH', isDefault: 1 }
-			],
-			order: 'Ut enim ad minim veniam, quis nostrud exercitation'
-		},
-		{
-			id: 3,
-			serialNumber: 1234,
-			title: 'Dell U2311H Black',
-			type: 'Monitors',
-			photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
-			guarantee: {
-				start: new Date('2022-01-01'),
-				end: new Date('2023-01-01')
-			},
-			price: [
-				{ value: 100, symbol: 'USD', isDefault: 0 },
-				{ value: 2600, symbol: 'UAH', isDefault: 1 }
-			],
-			order: 'Ut enim ad minim veniam, quis nostrud exercitation Ut enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud exercitation'
-		},
-		{
-			id: 4,
-			serialNumber: 123456,
-			title: 'HP Pavilion 15-eh1107ua (4A7N3EA) Silver',
-			type: 'Laptops',
-			photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
-			guarantee: {
-				start: new Date('2022-01-01'),
-				end: new Date('2023-01-01')
-			},
-			price: [
-				{ value: 100, symbol: 'USD', isDefault: 0 },
-				{ value: 2600, symbol: 'UAH', isDefault: 1 }
-			],
-			order: 'Ut enim ad minim veniam, quis nostrud exercitation'
-		}
-	];
+	const { products, orders } = useSelector(({ store }) => store);
 
 	const [selectedType, setSelectedType] = useState('');
 
@@ -100,6 +36,7 @@ const ProductComponent = () => {
 			{filteredProducts.map(product => {
 				const defaultPrice = product.price.find(price => price.isDefault === 1);
 				const notDefaultPrice = product.price.find(price => price.isDefault === 0);
+				const filteredOrder = orders.filter(order => order.id === product.order);
 				return (
 					<div key={product.id} className="products-table">
 						<div className="col-lg-1">
@@ -108,14 +45,15 @@ const ProductComponent = () => {
 						<div className="col-lg-3">
 							{product.title}
 							<br />
-							<span className="serial-number">SN-{product.serialNumber}</span>
+							<span className="products-table__serial">SN-{product.serialNumber}</span>
 						</div>
 						<div className="col-lg-1">{product.type}</div>
+
 						<div className="col-lg-2">
-							<span className="start-end">start</span>
+							<span className="products-table__guarantee">start</span>
 							<span>{product.guarantee.start.toDateString()}</span>
 							<br />
-							<span className="start-end">end</span>
+							<span className="products-table__guarantee">end</span>
 							<span>{product.guarantee.end.toDateString()}</span>
 						</div>
 
@@ -141,7 +79,7 @@ const ProductComponent = () => {
 							)}
 						</div>
 
-						<div className="col-lg-4">{product.order}</div>
+						<div className="col-lg-4">{filteredOrder[0].title}</div>
 					</div>
 				);
 			})}

@@ -19,15 +19,15 @@ const TopMenu = () => {
 
 	return (
 		<div className="top-menu">
-			<Link to="/">
-				<img src={logo} alt="Logo"></img>
+			<Link to="/" className="top-menu__link">
+				<img className="top-menu__logo" src={logo} alt="Logo"></img>
 				<span>INVENTORY</span>
 			</Link>
 			<div>
 				Today
 				<br />
 				<span>{currentTime.toLocaleDateString()}</span>
-				<FontAwesomeIcon className="icon ms-3 me-1" icon={faClock} />
+				<FontAwesomeIcon className="top-menu__icon ms-3 me-1" icon={faClock} />
 				<span>{currentTime.toLocaleTimeString()}</span>
 			</div>
 		</div>

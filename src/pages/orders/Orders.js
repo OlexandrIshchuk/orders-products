@@ -1,14 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import OrderComponent from '../../components/OrderComponent';
-import './orders.styles.scss';
+
+import './orders.styles.css';
 
 const Orders = () => {
+	const { orders } = useSelector(({ store }) => store);
+
 	return (
-		<div className="orders-wrapper">
-			<h1 className="mb-5">Orders / 25</h1>
-			<OrderComponent />
-			<OrderComponent />
-			<OrderComponent />
+		<div className="">
+			<h1 className="mb-5">Orders / {orders.length}</h1>
 			<OrderComponent />
 		</div>
 	);
