@@ -25,16 +25,16 @@ function DeleteOrderModal({ data }) {
 		<>
 			<FontAwesomeIcon className="order-item__trash" icon={faTrashCan} onClick={handleShow} />
 
-			<Modal show={show} onHide={handleClose}>
+			<Modal show={show} onHide={handleClose} className="modal">
 				<Modal.Header closeButton>
 					<Modal.Title>Are you sure you want to delete this order?</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>{data.title}</Modal.Body>
-				<Modal.Footer>
-					<Button variant="secondary" onClick={handleClose}>
+				<Modal.Footer className="modal-footer">
+					<Button variant="light" className="modal-footer__cancel" onClick={handleClose}>
 						Cancel
 					</Button>
-					<Button variant="primary" onClick={deleteOrder}>
+					<Button variant="light" className="modal-footer__delete" onClick={deleteOrder}>
 						Delete order
 					</Button>
 				</Modal.Footer>

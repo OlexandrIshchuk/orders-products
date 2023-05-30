@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import io from 'socket.io-client';
+import socketIOClient from 'socket.io-client';
+
+const ENDPOINT = 'http://localhost:3001';
 
 const CounterComponent = () => {
 	const [activeSessions, setActiveSessions] = useState(0);
 
 	useEffect(() => {
-		const socket = io('http://localhost:3001');
+		const socket = socketIOClient(ENDPOINT);
 
 		socket.on('activeSessions', count => {
 			setActiveSessions(count);
@@ -16,11 +18,7 @@ const CounterComponent = () => {
 		};
 	}, []);
 
-	return (
-		<div>
-			<h1>Active Sessions: {activeSessions}</h1>
-		</div>
-	);
+	return <div>Active Sessions: {activeSessions}</div>;
 };
 
 export default CounterComponent;

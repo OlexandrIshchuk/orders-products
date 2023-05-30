@@ -3,13 +3,18 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo192.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+import CounterComponent from './CounterComponent';
+import moment from 'moment';
+import 'moment/locale/uk';
 
 const TopMenu = () => {
-	const [currentTime, setCurrentTime] = useState(new Date());
+	const [currentTime, setCurrentTime] = useState(moment().format('LT'));
+	const [currentDay, setCurrentday] = useState(moment().format('ll'));
 
 	useEffect(() => {
 		const timer = setInterval(() => {
-			setCurrentTime(new Date());
+			setCurrentTime(moment().format('LT'));
+			setCurrentday(moment().format('ll'));
 		}, 1000);
 
 		return () => {
@@ -26,9 +31,11 @@ const TopMenu = () => {
 			<div>
 				Today
 				<br />
-				<span>{currentTime.toLocaleDateString()}</span>
+				<span>{currentDay}</span>
 				<FontAwesomeIcon className="top-menu__icon ms-3 me-1" icon={faClock} />
-				<span>{currentTime.toLocaleTimeString()}</span>
+				<span>{currentTime}</span>
+				<br />
+				<CounterComponent />
 			</div>
 		</div>
 	);

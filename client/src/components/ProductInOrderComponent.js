@@ -12,7 +12,7 @@ const ProductInOrderComponent = () => {
 			<h4 className="p-4">{filteredOrder[0].title}</h4>
 
 			{filteredProducts.map(product => (
-				<div key={product.id} className="products-in-order-table">
+				<div key={product.id} className="products-in-order-table animate__animated animate__fadeIn">
 					<div className="col-lg-1">
 						<img src={product.photo} alt="Product"></img>
 					</div>

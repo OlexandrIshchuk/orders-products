@@ -2,7 +2,7 @@ export const orders = [
 	{
 		id: 1,
 		title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 1',
-		date: new Date('2023-01-01'),
+		date: '2022-06-29 12:09:33',
 		description: 'desc',
 		get products() {
 			return products;
@@ -11,7 +11,7 @@ export const orders = [
 	{
 		id: 2,
 		title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 2',
-		date: new Date('2023-01-01'),
+		date: '2022-06-29 12:09:33',
 		description: 'desc',
 		get products() {
 			return products;
@@ -20,7 +20,7 @@ export const orders = [
 	{
 		id: 3,
 		title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 3',
-		date: new Date('2023-01-01'),
+		date: '2022-06-29 12:09:33',
 		description: 'desc',
 		get products() {
 			return products;
@@ -29,7 +29,7 @@ export const orders = [
 	{
 		id: 4,
 		title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit 4',
-		date: new Date('2023-01-01'),
+		date: '2022-06-29 12:09:33',
 		description: 'desc',
 		get products() {
 			return products;
@@ -45,8 +45,8 @@ export const products = [
 		type: 'Monitors',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -61,8 +61,8 @@ export const products = [
 		type: 'Monitors',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -77,8 +77,8 @@ export const products = [
 		type: 'Monitors',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -93,8 +93,8 @@ export const products = [
 		type: 'Laptops',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -109,8 +109,8 @@ export const products = [
 		type: 'Laptops',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -125,8 +125,8 @@ export const products = [
 		type: 'Laptops',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -141,8 +141,8 @@ export const products = [
 		type: 'Laptops',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -157,8 +157,8 @@ export const products = [
 		type: 'Laptops',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -173,8 +173,8 @@ export const products = [
 		type: 'Laptops',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -189,8 +189,8 @@ export const products = [
 		type: 'Laptops',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
@@ -205,8 +205,8 @@ export const products = [
 		type: 'Monitors',
 		photo: 'https://i.dummyjson.com/data/products/8/thumbnail.jpg',
 		guarantee: {
-			start: new Date('2022-01-01'),
-			end: new Date('2023-01-01')
+			start: '2022-06-29 12:09:33',
+			end: '2023-06-29 12:09:33'
 		},
 		price: [
 			{ value: 100, symbol: 'USD', isDefault: 0 },
