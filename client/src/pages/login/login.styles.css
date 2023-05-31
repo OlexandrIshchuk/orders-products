@@ -1,0 +1,38 @@
+.login-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	width: 351px;
+}
+
+.login-button {
+	margin-top: 40px;
+	background-color: green;
+	border: 2px solid green;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.login-button:hover {
+	background-color: #0cb50c;
+	color: #ffffff;
+	border: 2px solid green;
+}
+
+.login-button:active {
+	background-color: #0c580c !important;
+	border: 2px solid green !important;
+	color: #ffffff !important;
+}
+
+.register-link {
+	text-decoration: underline;
+	color: #0d6efd;
+}

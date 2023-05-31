@@ -1,0 +1,33 @@
+.register-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.register {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	width: 351px;
+}
+
+.register__button {
+	margin-top: 60px;
+	text-transform: uppercase;
+	font-weight: 600;
+	background-color: green;
+	border: 2px solid green;
+	color: #ffffff;
+}
+
+.register__button:hover {
+	background-color: #0cb50c;
+	color: #ffffff;
+	border: 2px solid green;
+}
+
+.register__button:active {
+	background-color: #0c580c !important;
+	border: 2px solid green !important;
+	color: #ffffff !important;
+}

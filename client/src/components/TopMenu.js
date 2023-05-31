@@ -35,7 +35,7 @@ const TopMenu = () => {
 				<FontAwesomeIcon className="top-menu__icon ms-3 me-1" icon={faClock} />
 				<span>{currentTime}</span>
 				<br />
-				<CounterComponent />
+				{/* <CounterComponent /> */}
 			</div>
 		</div>
 	);

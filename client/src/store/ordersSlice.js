@@ -20,7 +20,8 @@ const ordersSlice = createSlice({
 			state.orders = state.orders.filter(order => order.id !== action.payload);
 		},
 		removeProduct: (state, action) => {
-			state.products = state.products.filter(product => product.id !== action.payload);
+			const productIdsToRemove = action.payload;
+			state.products = state.products.filter(product => !productIdsToRemove.includes(product.id));
 		},
 		setSelectedOrder: (state, action) => {
 			state.selectedOrder = action.payload;

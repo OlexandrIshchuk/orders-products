@@ -7,6 +7,7 @@
 	padding: 10px;
 	border: 1px solid #dfdfdf;
 	border-radius: 6px;
+	background-color: #ffffff;
 	color: #706f6f;
 	margin-bottom: 10px;
 }
@@ -120,6 +121,7 @@
 .products-in-order {
 	border: 1px solid #dfdfdf;
 	border-radius: 6px;
+	background-color: #ffffff;
 }
 
 .products-in-order-table {

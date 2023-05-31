@@ -95,7 +95,7 @@ const OrderComponent = () => {
 								)}
 								{!show ? (
 									<div className="col-lg-1 d-flex align-items-center">
-										<DeleteOrderModal data={order} />
+										<DeleteOrderModal order={order} products={filteredProducts} />
 									</div>
 								) : order.id === selectedOrder ? (
 									<div className="col-lg-1">

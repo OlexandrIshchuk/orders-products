@@ -4,12 +4,12 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const cors = require('cors');
 
-// app.use(
-// 	cors({
-// 		origin: '*',
-// 		methods: ['GET', 'POST']
-// 	})
-// );
+app.use(
+	cors({
+		origin: '*',
+		methods: ['GET', 'POST']
+	})
+);
 
 let activeSessions = 0;
 
