@@ -6,6 +6,7 @@ import Orders from './pages/orders/Orders';
 import Products from './pages/products/Products';
 import Login from './pages/login/LoginPage';
 import Register from './pages/register/RegisterPage';
+import AddOrderPage from './pages/addorder/AddOrderPage';
 import { setOrders, setProducts } from './store/ordersSlice';
 import { orders, products } from './components/DataStorage';
 
@@ -23,6 +24,7 @@ function App() {
 					<Route path="products" element={<Products />} />
 					<Route path="login" element={<Login />} />
 					<Route path="register" element={<Register />} />
+					<Route path="add-order" element={<AddOrderPage />} />
 					<Route path="*" element={<NoPage />} />
 				</Route>
 			</Routes>
